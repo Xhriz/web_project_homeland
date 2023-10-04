@@ -1,0 +1,120 @@
+.places{
+  color: white;
+  font-family: 'Inter';
+
+}
+.places__block{
+  margin: 80px auto;
+  max-width: 984px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "title artist"
+                       "image paragraph"
+                       "link paragraph";
+  grid-column-gap:40px;
+}
+
+.places__title{
+font-size: 72px;
+font-weight: 900;
+line-height: 1;
+max-width: 460px;
+grid-area: title;
+}
+.places__image{
+  width: 100%;
+  object-fit: cover;
+  grid-area: image;
+}
+.places__container-art{
+  width: 100%;
+  margin-top: auto;
+  margin-bottom: 12%;
+  grid-area: artist;
+}
+.places__artist{
+  color: #AAA;
+font-size: 12px;
+font-weight: 400;
+letter-spacing: 1.44px;
+}
+.places__author{
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 0;
+}
+.places__container-text{
+ max-width: 100%;
+ row-gap: 27px;
+ grid-row-start: span 3;
+}
+.places__paragraph{
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.2;
+  grid-area: paragraph;
+  margin-top: 0;
+  margin-bottom: 7%;
+}
+.places__link{
+  text-decoration: none;
+  color: #FFF;
+  background-color: #0278FE;
+  border-radius: 4px;
+  padding: 13px 20px;
+  text-align: center;
+  width: 90%;
+  border: none;
+  margin-top: 10%;
+  grid-area: link;
+  transition: background-color 0.5s linear;
+  cursor: pointer;
+  font-weight: 600;
+}
+.places__link:hover{
+ background-color:#0063D2;
+}
+@media screen and (max-width:1000px){
+ .places__block{
+  max-width: 733px;
+ }
+ .places__title{
+font-size: 42px;
+width: 400px;
+ }
+ .places__paragraph{
+  font-size: 16px;
+ }
+}
+@media screen and (max-width:640px){
+.places__block{
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, 0.1fr);
+  grid-template-areas: "title"
+                       "artist"
+                       "image"
+                       "paragraph"
+                       "link";
+}
+.places__title{
+width: 90%;
+margin: 0 auto;
+  font-size: 32px;
+}
+.places__container-art{
+  width: 90%;
+  margin: 30px auto;
+}
+.places__container-text{
+    grid-row-start: initial;
+    width: 90%;
+    margin: 30px auto 0;
+}
+.places__link{
+ padding: 13px 5px;
+  font-size: 14px;
+  margin: 0 auto;
+}
+}
+
